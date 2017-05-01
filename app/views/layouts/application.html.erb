@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>NureApply</title>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i" rel="stylesheet">
+  <meta name="viewport" content="width=device-width">
+  <script src="https://use.typekit.net/vet1snk.js"></script>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <%= render 'layouts/header' %>
+
+  <%- if controller_name == 'static_pages'%>
+    <main>
+      <%= yield %>
+    </main>
+  <% else %>
+    <main>
+      <section class="section">
+        <div class="inner-wrapper">
+          <aside class="frame"></aside>
+          <div class="content">
+             <%= yield %>
+          </div>
+          <aside class="frame"></aside>
+          </div>
+        </section>
+    </main>
+  <% end %>
+
+  <%= render 'layouts/footer' %>
+
+  <%= javascript_include_tag 'script', 'data-turbolinks-track' => true %>
+
+</body>
+</html>

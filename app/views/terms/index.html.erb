@@ -1,0 +1,25 @@
+<div class="terms">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Listing Terms</h1>
+
+  <table class="table table-hover">
+    <tbody>
+    <% @terms.each do |term| %>
+        <tr>
+          <td><%= term.title %></td>
+          <td><%= term.text %></td>
+          <% if user_signed_in? && current_user.admin? %>
+            <td><%= link_to 'Edit', edit_term_path(term) %></td>
+            <td><%= link_to 'Destroy', term, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+          <% end %>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Term', new_term_path, class:"cta cta--inverse cta--inline" %>
+
+</div>

@@ -1,0 +1,68 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "main";
+
+
+a:hover {
+    text-decoration: none;
+}
+
+.custab{
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+}
+.custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+}
+
+.terms {
+    padding: 20px;
+    text-align: center;
+}
+
+.rules {
+    padding: 20px;
+    text-align: center;
+}
+
+.new-item {
+    padding: 20px;
+}
+
+.inline-buttons{
+    display: inline;
+}
+
+.signup {
+    padding: 20px;
+    text-align: center;
+
+    input {
+        width: 300px;
+    }
+
+    select {
+        width: 300px;
+    }
+}
+
+#back{
+    width: 125px;
+    height: 50px;
+}
+
+.create {
+    font-family: "proxima-nova", sans-serif;
+    font-weight: 500;
+    color: #337ab7;
+    border-color: #337ab7;
+    cursor: pointer;
+
+    &:hover{
+        color: #fff;
+    }
+}

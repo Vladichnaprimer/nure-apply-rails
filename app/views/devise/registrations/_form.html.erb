@@ -1,0 +1,30 @@
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br>
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <br>
+    <%= f.label :category  %><br />
+    <%= f.select :category, User.categories.keys.map { |w| [w.capitalize, w] } %>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="inline-buttons">
+    <%= f.submit 'Sign up', class: 'create' %>
+  </div>
+<% end %>

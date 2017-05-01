@@ -1,0 +1,104 @@
+<div data-sticky-container>
+  <header class="main-header sticky" data-sticky data-margin-top="0" data-sticky-on="small">
+    <div class="inner-wrapper">
+      <aside class="frame"></aside>
+      <div class="content">
+        <div class="row">
+          <div class="columns main-header__logo">
+            <%= link_to root_path do %>
+                <img src="/images/nure.png" alt="NURE">
+            <% end %>
+          </div>
+          <nav class="columns animated" data-animation="fadeIn" data-animation-disable="950">
+            <ul>
+              <li><%= link_to 'Главная', root_path%></li>
+              <li class="has-submenu">
+                <a href="">Стуктура ХНУРЭ</a>
+                <div class="submenu">
+                  <ul class="row align-top align-justify">
+                    <li>
+                      <a href="" class="submenu__headline">КН</a>
+                      <ul class="subsubmenu">
+                        <li class="submenu__link"><a href="">Кафедра искусстенного интеллекта</a></li>
+                        <li class="submenu__link"><a href="">Кафедра системотехники</a></li>
+                        <li class="submenu__link"><a href="">Кафедра ПИ</a></li>
+                        <li class="submenu__link"><a href="">Кафедра МСТ</a></li>
+                        <li class="submenu__link"><a href="">Кафедра ИУС</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="" class="submenu__headline">КИУ</a>
+                      <ul class="subsubmenu">
+                        <li class="submenu__link"><a href="">Кафедра БИКС</a></li>
+                        <li class="submenu__link"><a href="">Кафедра ЭВМ</a></li>
+                        <li class="submenu__link"><a href="">КИ</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="" class="submenu__headline">РТ</a>
+                      <ul class="subsubmenu">
+                        <li class="submenu__link"><a href="">Кафедра СТЗИ</a></li>
+                        <li class="submenu__link"><a href="">Кафедра РТ</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="" class="submenu__headline">ТКВТ</a>
+                      <ul class="subsubmenu">
+                        <li class="submenu__link"><a href="">ТКВТ</a></li>
+                        <li class="submenu__link"><a href="">АКИТ</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="has-submenu">
+                <%= link_to 'Правила', rules_path %>
+                <div class="submenu">
+                  <ul class="row align-top align-justify">
+                    <li>
+                      <ul>
+                        <li class="submenu__link"><%= link_to 'Поступление на 1-й курс', rules_path %></li>
+                        <li class="submenu__link"><%= link_to 'Поступление на 2-й курс', rules_path %></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul>
+                        <li class="submenu__link"><%= link_to 'Поступление на магистратуру', rules_path %></li>
+                        <li class="submenu__link"><%= link_to 'Поступление в аспирантуру', rules_path %></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <ul>
+                        <li class="submenu__link"><%= link_to 'Иностранцам', rules_path %></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li><%= link_to 'Термины', terms_path %></li>
+              <li><a href="">Спросить</a></li>
+              <li><%= link_to 'Контакты', contact_path %></li>
+              <% if user_signed_in? %>
+                <li><%= link_to 'Выйти', destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                <li></li>
+                <li class="has-submenu">
+                  <a href="">Войти</a>
+                  <div class="submenu">
+                    <span class="submenu__headline text-center"><%= link_to 'Вход', new_user_session_path %></span>
+                    <span class="submenu__headline text-center"><%= link_to 'Регистрация', new_user_registration_path %></span>
+                  </div>
+                </li>
+              <% end %>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="main-header__toggle__wrapper columns">
+          <div class="main-header__toggle"><span></span></div>
+        </div>
+      </div>
+      <aside class="frame"></aside>
+    </div>
+  </header>
+</div>
