@@ -27,6 +27,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'byebug'
 
+gem 'carrierwave', '~> 1.0'
+gem 'bootstrap-wysihtml5-rails'
+gem 'simple_form'
+
+#Use for Windows
+gem 'bootstrap-sass-extras'
+gem 'twitter-bootstrap-rails'
+gem 'coffee-script-source', '1.8.0'
+gem 'libv8', '~> 3.11.8.3', :platform => :ruby
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -73,7 +73,6 @@
   </div>
 </section>
 
-
 <section class="section news__wrapper">
   <div class="inner-wrapper">
     <aside class="frame"></aside>
@@ -81,36 +80,17 @@
       <div class="row collapse align-spaced">
         <div class="small-12 medium-5 columns news">
           <h2 class="section__title text-left">Новости</h2>
-          <div class="carousel carousel--no-arrows news__dates" data-slick='{"arrows": false, "dots": false, "slidesToShow": 3, "asNavFor": "#news__content-1", "responsive": [{"breakpoint": 640, "settings": {"centerMode": true, "centerPadding": "40px"}}]}' id="news__dates-1">
-            <div>03.01.17</div>
-            <div>29.12.16</div>
-            <div>15.11.16</div>
+          <div class="carousel carousel--no-arrows news__dates" data-slick='{"arrows": false, "dots": false, "slidesToShow": 3, "asNavFor": "#news__content-1", "responsive": [{"breakpoint": 500, "settings": {"centerMode": true, "centerPadding": "40px"}}]}' id="news__dates-1" style: 'display: none'>
           </div>
-          <div class="carousel carousel--no-arrows news__content" data-slick='{"arrows": false, "dots": false, "asNavFor": "#news__dates-1", "responsive": [{"breakpoint": 640, "settings": {"dots": true}}]}' id="news__content-1">
-            <div>
-              <img src="/images/nure-banner.png" alt="nure">
-              <h3>Frischer Wind bei Luxury Dreams &ndash;<br>neues Design in Print und Online</h3>
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam erat, sed diam voluptua. At vero ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr nonumy eirmod tempor.</p>
-              <a href="" class="link">Mehr erfahren</a>
-            </div>
-            <div>
-              <img src="/images/nure-banner.png" alt="nure">
-              <h3>Frischer Wind bei Luxury Dreams &ndash;<br>neues Design in Print und Online</h3>
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam erat, sed diam voluptua. At vero ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr nonumy eirmod tempor.</p>
-              <a href="" class="link">Mehr erfahren</a>
-            </div>
-            <div>
-              <img src="/images/nure-banner.png" alt="nure">
-              <h3>Frischer Wind bei Luxury Dreams &ndash;<br>neues Design in Print und Online</h3>
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                labore et dolore magna aliquyam erat, sed diam voluptua. At vero ipsum dolor sit amet. Lorem ipsum
-                dolor sit amet, consetetur sadipscing elitr nonumy eirmod tempor.</p>
-              <a href="" class="link">Mehr erfahren</a>
-            </div>
+          <div class="carousel carousel--no-arrows news__content" data-slick='{"arrows": true, "dots": false, "asNavFor": "#news__dates-1", "responsive": [{"breakpoint": 500, "settings": {"dots": true}}]}' id="news__content-1">
+            <% @news.each do |news| %>
+              <div>
+                <%= image_tag news.image, height: 171, width: 446 %>
+                <h3><%= news.title %></h3>
+                <p><%= truncate news.description, length: 45 %></p>
+                <a href="" class="link">LINK</a>
+              </div>
+            <% end %>
           </div>
         </div>
         <div class="small-12 medium-5 columns text-center beratung">
