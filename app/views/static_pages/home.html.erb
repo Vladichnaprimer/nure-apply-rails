@@ -87,7 +87,7 @@
               <div>
                 <%= image_tag news.image, height: 171, width: 446 %>
                 <h3><%= news.title %></h3>
-                <p><%= truncate news.description, length: 45 %></p>
+                <p><%= news.description.html_safe%></p>
                 <a href="" class="link">LINK</a>
               </div>
             <% end %>

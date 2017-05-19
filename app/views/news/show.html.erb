@@ -6,8 +6,13 @@
 </p>
 
 <p>
+  <strong>Link:</strong>
+  <%= @news.link %>
+</p>
+
+<p>
   <strong>Description:</strong>
-  <%= @news.description %>
+  <%= @news.description.html_safe %>
 </p>
 
 <p>

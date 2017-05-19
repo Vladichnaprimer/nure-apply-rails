@@ -1,4 +1,4 @@
-<%= form_for(@news) do |f| %>
+<%= simple_form_for @news, html: {multipart: true} do |f| %>
   <% if @news.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@news.errors.count, "error") %> prohibited this news from being saved:</h2>
@@ -12,18 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.input :title %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
+    <%= f.input :description, as: :wysihtml5 %>
   </div>
   <div class="field">
-    <%= f.label :image %><br>
-    <%= f.file_field :image %>
+    <%= f.input :link %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="field">
+    <%= f.input :image %>
+  </div>
+
+  <div class="inline-buttons">
+    <%= f.button :submit, 'Create news', class: 'create' %>
+    <%= link_to 'Back', root_path,  class:"cta cta--inverse cta--inline" %>
   </div>
 <% end %>

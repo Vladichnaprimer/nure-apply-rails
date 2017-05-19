@@ -22,7 +22,7 @@
       <%= f.label :category %><br>
       <%= f.select :category, Rule.categories.keys.map { |w| [w.capitalize, w] } %>
     </div>
-  </div
+  </div>
   <br><br>
   <div class="inline-buttons">
     <%= f.button :submit, 'Create rule', class: 'create' %>
