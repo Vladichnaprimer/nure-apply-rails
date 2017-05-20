@@ -1,5 +1,7 @@
 class Rule < ActiveRecord::Base
 
+  scope :schooler, -> { where(category: Rule.categories[:schooler]) }
+
   enum category: {
     schooler: 1,
     college: 2,

@@ -41,6 +41,10 @@ a:hover {
         border-radius: 0;
         margin-top: -2px;
         padding: 0.85rem 2rem;
+
+        &:hover{
+            background: #337ab7;
+        }
     }
     .create {
         font-family: "proxima-nova", sans-serif;
@@ -97,4 +101,8 @@ a:hover {
 
 .frm_simple{
 	width:70%
+}
+
+.rule-text{
+    text-align: left;
 }
