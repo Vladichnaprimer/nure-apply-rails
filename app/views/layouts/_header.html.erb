@@ -15,46 +15,11 @@
             <ul>
               <li><%= link_to 'Главная', root_path%></li>
               <li class="has-submenu">
-                <a href="">Стуктура ХНУРЭ</a>
-                <div class="submenu">
-                  <ul class="row align-top align-justify">
-                    <li>
-                      <a href="" class="submenu__headline">КН</a>
-                      <ul class="subsubmenu">
-                        <li class="submenu__link"><a href="">Кафедра искусстенного интеллекта</a></li>
-                        <li class="submenu__link"><a href="">Кафедра системотехники</a></li>
-                        <li class="submenu__link"><a href="">Кафедра ПИ</a></li>
-                        <li class="submenu__link"><a href="">Кафедра МСТ</a></li>
-                        <li class="submenu__link"><a href="">Кафедра ИУС</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="" class="submenu__headline">КИУ</a>
-                      <ul class="subsubmenu">
-                        <li class="submenu__link"><a href="">Кафедра БИКС</a></li>
-                        <li class="submenu__link"><a href="">Кафедра ЭВМ</a></li>
-                        <li class="submenu__link"><a href="">КИ</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="" class="submenu__headline">РТ</a>
-                      <ul class="subsubmenu">
-                        <li class="submenu__link"><a href="">Кафедра СТЗИ</a></li>
-                        <li class="submenu__link"><a href="">Кафедра РТ</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                      <a href="" class="submenu__headline">ТКВТ</a>
-                      <ul class="subsubmenu">
-                        <li class="submenu__link"><a href="">ТКВТ</a></li>
-                        <li class="submenu__link"><a href="">АКИТ</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li class="has-submenu">
-                <%= link_to 'Правила', rules_path %>
+                <% if user_signed_in? && current_user.admin?  %>
+                  <%= link_to 'Правила', rules_path %>
+                <% else %>
+                  <%= link_to 'Правила', rules_view_path %>
+                <% end %>
                 <div class="submenu">
                   <ul class="row align-top align-justify">
                     <li>
@@ -83,7 +48,6 @@
               <% if user_signed_in? %>
                 <li><%= link_to 'Выйти', destroy_user_session_path, method: :delete %></li>
               <% else %>
-                <li></li>
                 <li class="has-submenu">
                   <a href="">Войти</a>
                   <div class="submenu">

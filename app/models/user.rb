@@ -13,8 +13,8 @@ class User < ActiveRecord::Base
   enum category: {
     schooler: 1,
     college: 2,
-    master: 3,
-    aspirant: 4,
+    bachelor: 3,
+    master: 4,
     foreign: 5
   }
 

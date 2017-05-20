@@ -37,6 +37,22 @@ a:hover {
 
 .inline-buttons{
     display: inline;
+    .create {
+        font-family: "proxima-nova", sans-serif;
+        font-weight: 500;
+        color: #337ab7;
+        border-color: #337ab7;
+        cursor: pointer;
+
+        .blue-border{
+            border: 1px solid #337ab7;
+        }
+
+        &:hover{
+            color: #fff;
+        }
+    }
+
 }
 
 .signup {
@@ -63,6 +79,10 @@ a:hover {
     color: #337ab7;
     border-color: #337ab7;
     cursor: pointer;
+
+    .blue-border{
+        border: 1px solid #337ab7;
+    }
 
     &:hover{
         color: #fff;
