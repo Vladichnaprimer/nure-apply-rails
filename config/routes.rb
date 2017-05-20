@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       registrations: 'registrations'
    }
   resources :rules
+  get '/rules-view', to: 'rules#index_for_veiws'
   resources :terms
   root 'static_pages#home'
   get '/contact', to: 'static_pages#contact'

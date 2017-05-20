@@ -21,6 +21,10 @@ class RulesController < ApplicationController
   def edit
   end
 
+  def index_for_users
+    @rules = Rule.all
+  end
+
   # POST /rules
   # POST /rules.json
   def create
