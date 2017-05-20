@@ -25,13 +25,19 @@ class RulesController < ApplicationController
     @rules = Rule.all
   end
 
-  %w[schooler college
-    bachelor master foreign].each do |category|
-      <<-eos
-        def #{category}_rule
-        end
-      eos
+  # %w[schooler college
+  #   bachelor master foreign].each do |category|
+  #     <<-eos
+  #       def #{category}_rule
+  #           @rules = Role."#{category}"
+  #       end
+  #     eos
+  #   end
+
+    def schooler_rule
+      @rules = Rule.schooler
     end
+
 
   # POST /rules
   # POST /rules.json

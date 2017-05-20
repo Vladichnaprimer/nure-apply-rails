@@ -9,7 +9,6 @@
       <% @rules.each do |rule| %>
         <tr>
           <td><%= rule.title %></td>
-          <td><%= rule.text %></td>
           <td><%= rule.category %></td>
           <% if user_signed_in? && current_user.admin? %>
             <td><%= link_to 'Edit', edit_rule_path(rule) %></td>
