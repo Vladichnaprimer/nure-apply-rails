@@ -11,13 +11,13 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field frm_simple">
     <%= f.input :title %>
   </div>
   <div class="field">
     <%= f.input :description, as: :wysihtml5 %>
   </div>
-  <div class="field">
+  <div class="field frm_simple">
     <%= f.input :link %>
   </div>
   <div class="field">
@@ -26,6 +26,6 @@
 
   <div class="inline-buttons">
     <%= f.button :submit, 'Create news', class: 'create' %>
-    <%= link_to 'Back', root_path,  class:"cta cta--inverse cta--inline" %>
+    <%= link_to 'Back', root_path,  class: "cta cta--inverse cta--inline" %>
   </div>
 <% end %>

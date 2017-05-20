@@ -1,4 +1,4 @@
-<%= form_for(@term) do |f| %>
+<%= simple_form_for(@term) do |f| %>
   <% if @term.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@term.errors.count, "error") %> prohibited this term from being saved:</h2>
@@ -11,16 +11,14 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="field frm_simple">
+    <%= f.input :title %>
   </div>
   <div class="field">
-    <%= f.label :text %><br>
-    <%= f.text_area :text %>
+    <%= f.input :text, as: :wysihtml5 %>
   </div>
   <div class="inline-buttons">
-    <%= f.submit 'Create Term', class: 'create' %>
+    <%= f.button :submit, 'Create rule', class: 'create' %>
     <%= link_to 'Back', rules_path,  class:"cta cta--inverse cta--inline" %>
   </div>
 

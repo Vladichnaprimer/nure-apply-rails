@@ -36,6 +36,7 @@ gem 'bootstrap-sass-extras'
 gem 'twitter-bootstrap-rails'
 gem 'coffee-script-source', '1.8.0'
 gem 'libv8', '~> 3.11.8.3', :platform => :ruby
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
