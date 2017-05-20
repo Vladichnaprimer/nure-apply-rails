@@ -8,7 +8,8 @@
   <script src="https://use.typekit.net/vet1snk.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -16,26 +17,26 @@
   <%= render 'layouts/header' %>
 
   <%- if controller_name == 'static_pages'%>
-    <main>
-      <%= yield %>
-    </main>
+  <main>
+    <%= yield %>
+  </main>
   <% else %>
-    <main>
-      <section class="section">
-        <div class="inner-wrapper">
-          <aside class="frame"></aside>
-          <div class="content">
-             <%= yield %>
-          </div>
-          <aside class="frame"></aside>
-          </div>
-        </section>
-    </main>
-  <% end %>
+  <main>
+    <section class="section">
+      <div class="inner-wrapper">
+        <aside class="frame"></aside>
+        <div class="content">
+         <%= yield %>
+       </div>
+       <aside class="frame"></aside>
+     </div>
+   </section>
+ </main>
+ <% end %>
 
-  <%= render 'layouts/footer' %>
+ <%= render 'layouts/footer' %>
 
-  <%= javascript_include_tag 'script', 'data-turbolinks-track' => true %>
+ <%= javascript_include_tag 'script', 'data-turbolinks-track' => true %>
 
 </body>
 </html>
