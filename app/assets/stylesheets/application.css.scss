@@ -3,6 +3,7 @@
 @import "main";
 
 @import "bootstrap-wysihtml5/bootstrap3-wysihtml5";
+@import "modal";
 
 
 a:hover {
@@ -105,4 +106,8 @@ a:hover {
 
 .rule-text{
     text-align: left;
+}
+
+.submenu{
+  border: 1px solid #337ab7;
 }
