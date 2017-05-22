@@ -48,13 +48,7 @@
               <% if user_signed_in? %>
                 <li><%= link_to 'Выйти', destroy_user_session_path, method: :delete %></li>
               <% else %>
-                <li class="has-submenu">
-                  <a href="">Войти</a>
-                  <div class="submenu">
-                    <span class="submenu__headline text-center"><%= link_to 'Вход', new_user_session_path %></span>
-                    <span class="submenu__headline text-center"><%= link_to 'Регистрация', new_user_registration_path %></span>
-                  </div>
-                </li>
+                <li><a data-target="#authorization_modal" data-toggle="modal">Войти</a></li>
               <% end %>
             </ul>
           </nav>
