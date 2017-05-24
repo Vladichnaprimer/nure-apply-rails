@@ -9,10 +9,10 @@
   </div>
   <br><br>
   <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-      <% Rule.categories.keys.map do |cat|%>
+    <div class="col-md-12">
+      <% Rule.categories.map do |k, v|%>
         <div class="inline-buttons">
-          <%= link_to cat.capitalize, polymorphic_path(cat), class: 'btn btn-default create' %>
+          <%= link_to v, polymorphic_path(k), class: 'btn btn-default create' %>
         </div>
       <% end %>
     </div>

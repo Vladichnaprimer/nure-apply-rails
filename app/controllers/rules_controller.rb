@@ -34,10 +34,25 @@ class RulesController < ApplicationController
   #     eos
   #   end
 
-    def schooler_rule
-      @rules = Rule.schooler
-    end
+  def schooler_rule
+    @rules = Rule.schooler
+  end
 
+  def college_rule
+    @rules = Rule.college
+  end
+
+  def bachelor_rule
+    @rules = Rule.bachelor
+  end
+
+  def master_rule
+    @rules = Rule.master
+  end
+
+  def foreign_rule
+    @rules = Rule.foreign
+  end
 
   # POST /rules
   # POST /rules.json

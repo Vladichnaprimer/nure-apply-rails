@@ -1,0 +1,1 @@
+<% rules.each do |rule|%>  <div class="row">    <div class="col-md-8 col-md-offset-2">        <h2><%= rule.title %></h2>    </div>  </div>  <div class="row">    <div class="col-md-12">      <div class="rule-text">        <h4><%= rule.text.html_safe %> </h4>      </div>    </div>  </div><% end %>
