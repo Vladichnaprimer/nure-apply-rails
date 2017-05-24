@@ -24,7 +24,7 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
     <br>
     <%= f.label :category  %><br />
-    <%= f.select :category, User.categories.keys.map { |w| [w.capitalize, w] } %>
+    <%= f.select :category, User.categories.values.map { |v| [v] } %>
   </div>
   <br>
   <br>

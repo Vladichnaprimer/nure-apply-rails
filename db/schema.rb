@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170519203416) do
+ActiveRecord::Schema.define(version: 20170524184024) do
 
   create_table "news", force: :cascade do |t|
     t.string   "title"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20170519203416) do
   create_table "rules", force: :cascade do |t|
     t.string   "title"
     t.text     "text"
-    t.integer  "category"
+    t.string   "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 20170519203416) do
     t.datetime "updated_at",                          null: false
     t.string   "name"
     t.integer  "role",                   default: 1
-    t.integer  "category"
+    t.string   "category"
     t.float    "average"
   end
 
