@@ -1,5 +1,5 @@
 class AddAverageToUsers < ActiveRecord::Migration
   def change
-    add_column :users, :average, :double
+    add_column :users, :average, :float
   end
 end
