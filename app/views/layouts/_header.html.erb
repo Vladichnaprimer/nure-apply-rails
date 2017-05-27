@@ -29,19 +29,19 @@
                   <ul class="row align-top align-justify">
                     <li>
                       <ul>
-                        <li class="submenu__link"><%= link_to 'Вступ на 1-й курс', rules_path %></li>
-                        <li class="submenu__link"><%= link_to 'Вступ на 2-й курс', rules_path %></li>
+                        <li class="submenu__link"><%= link_to 'Вступ на 1-й курс', schooler_path %></li>
+                        <li class="submenu__link"><%= link_to 'Вступ на 2-й курс', college_path %></li>
                       </ul>
                     </li>
                     <li>
                       <ul>
-                        <li class="submenu__link"><%= link_to 'Вступ на магистратуру', rules_path %></li>
-                        <li class="submenu__link"><%= link_to 'Вступ в аспирантуру', rules_path %></li>
+                        <li class="submenu__link"><%= link_to 'Вступ на магистратуру', bachelor_path %></li>
+                        <li class="submenu__link"><%= link_to 'Вступ в аспирантуру', master_path %></li>
                       </ul>
                     </li>
                     <li>
                       <ul>
-                        <li class="submenu__link"><%= link_to 'Іноземним громадянам', rules_path %></li>
+                        <li class="submenu__link"><%= link_to 'Іноземним громадянам', foreign_path %></li>
                       </ul>
                     </li>
                   </ul>
@@ -57,7 +57,7 @@
               <% if user_signed_in? %>
                 <li><%= link_to 'Вийти', destroy_user_session_path, method: :delete %></li>
               <% else %>
-                <li><a data-target="#authorization_modal" data-toggle="modal">Війти</a></li>
+                <li><a data-target="#authorization_modal" data-toggle="modal">Увійти</a></li>
               <% end %>
             </ul>
           </nav>
