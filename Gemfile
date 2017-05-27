@@ -26,6 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'byebug'
 
+gem 'mail_form'
+
 gem 'carrierwave', '~> 1.0'
 gem 'bootstrap-wysihtml5-rails'
 gem 'simple_form'

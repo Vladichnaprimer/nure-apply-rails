@@ -19,7 +19,7 @@
 
   <%= render 'layouts/header' %>
 
-  <%- if controller_name == 'static_pages'%>
+  <%- if controller_name == 'static_pages' || controller_name == 'contacts' %>
     <main>
       <%= yield %>
     </main>

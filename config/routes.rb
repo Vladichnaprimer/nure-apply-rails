@@ -21,4 +21,6 @@ Rails.application.routes.draw do
   get '/contact', to: 'static_pages#contact'
   get '/structure', to: 'static_pages#structure'
 
+  resources :contacts, only: [:new, :create]
+
 end
