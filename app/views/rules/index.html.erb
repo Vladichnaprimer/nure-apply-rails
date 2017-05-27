@@ -1,7 +1,7 @@
 <div class="rules">
   <p id="notice"><%= notice %></p>
 
-  <h1>Listing Rules</h1>
+  <h1>Редагування правил</h1>
 
   <table class="table table-hover">
 
@@ -11,8 +11,8 @@
           <td><%= rule.title %></td>
           <td><%= rule.category %></td>
           <% if user_signed_in? && current_user.admin? %>
-            <td><%= link_to 'Edit', edit_rule_path(rule) %></td>
-            <td><%= link_to 'Destroy', rule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Редагувати', edit_rule_path(rule) %></td>
+            <td><%= link_to 'Видалити', rule, method: :delete, data: { confirm: 'Ви впевнені?' } %></td>
           <% end %>
         </tr>
       <% end %>
@@ -21,5 +21,5 @@
 
   <br>
 
-  <%= link_to 'New Rule', new_rule_path,  class:"cta cta--inverse cta--inline" %>
+  <%= link_to 'Додати правило', new_rule_path,  class:"cta cta--inverse cta--inline" %>
 </div>
