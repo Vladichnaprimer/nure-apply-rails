@@ -8,7 +8,7 @@
   <script src="https://use.typekit.net/vet1snk.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application' %>
-  <% if controller_name == 'static_pages' && action_name == 'home'%>
+  <% if controller_name == 'static_pages' %>
       <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <% end %>
@@ -41,7 +41,7 @@
  <%= render 'includes/login_modal' %>
 
  <%= javascript_include_tag 'script' %>
- <% unless controller_name == 'static_pages' && action_name == 'home'%>
+ <% unless controller_name == 'static_pages' %>
     <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
  <% end %>
