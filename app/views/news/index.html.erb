@@ -9,7 +9,7 @@
       <% @news.each do |news| %>
         <tr>
           <td><%= news.title %></td>
-          <td><%= truncate news.description, length: 80%></td>
+          <td><%= truncate news.description, length: 40 %></td>
           <% if user_signed_in? && current_user.admin? %>
             <td><%= link_to 'Edit', edit_news_path(news) %></td>
             <td><%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %></td>

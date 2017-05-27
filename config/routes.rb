@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  resources :news
   devise_for :users, controllers: {
       registrations: 'registrations'
    }
@@ -12,7 +11,12 @@ Rails.application.routes.draw do
   get '/rules-master', to: 'rules#master_rule', as: :master
   get '/rules-foreign', to: 'rules#foreign_rule', as: :foreign
 
+  resources :news
+
+  get '/last-news', to: 'news#users_news', as: :users_news
+
   resources :terms
+  get '/common-terms', to: 'terms#users_term', as: :users_term
   root 'static_pages#home'
   get '/contact', to: 'static_pages#contact'
   get '/structure', to: 'static_pages#structure'

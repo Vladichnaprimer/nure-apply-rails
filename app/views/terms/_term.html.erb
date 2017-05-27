@@ -1,0 +1,11 @@
+<% terms.each do |item|%>
+  <div class="row">
+    <div class="col-md-2"><h4><%= item.title %></h4></div>
+    <div class="col-md-10">
+      <div class="rule-text">
+        <h4><%= item.text.html_safe %> </h4>
+      </div>
+    </div>
+  </div>
+  <hr/>
+<% end %>

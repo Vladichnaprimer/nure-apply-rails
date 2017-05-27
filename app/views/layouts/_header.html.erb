@@ -14,6 +14,11 @@
           <nav class="columns animated" data-animation="fadeIn" data-animation-disable="950">
             <ul>
               <li><%= link_to 'Главная', root_path%></li>
+              <% if user_signed_in? && current_user.admin?  %>
+                  <li><%= link_to 'Новости', news_index_path %></li>
+                <% else %>
+                  <li><%= link_to 'Новости', users_news_path %></li>
+                <% end %>
               <li class="has-submenu">
                 <% if user_signed_in? && current_user.admin?  %>
                   <%= link_to 'Правила', rules_path %>
