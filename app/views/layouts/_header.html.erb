@@ -53,7 +53,7 @@
                 <li><%= link_to 'Терміни', users_term_path %></li>
               <%end%>
               <li><a href="">Запитати</a></li>
-              <li><%= link_to 'Контакти', contact_path %></li>
+              <li><%= link_to 'Контакти', new_contact_path %></li>
               <% if user_signed_in? %>
                 <li><%= link_to 'Вийти', destroy_user_session_path, method: :delete %></li>
               <% else %>
