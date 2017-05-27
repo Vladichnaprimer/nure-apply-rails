@@ -23,13 +23,13 @@
                 <%= image_tag news.image, height: 171, width: 446 %>
                 <h3><%= news.title %></h3>
                 <p><%= news.created_at.strftime("%d.%m.%Y") %></p>
-                <%= link_to 'Детали', news.link, class: "link"%>
+                <%= link_to 'Докладніше', news.link, class: "link"%>
               </div>
             <% end %>
           </div>
         </div>
         <div class="small-12 medium-5 columns text-center beratung">
-          <h2 class="section__title text-right">Контакты</h2>
+          <h2 class="section__title text-right">Контакти</h2>
           <div class="carousel carousel--no-arrows">
             <img style="width: 250px; height: 250px;" src="/images/commision.jpg" alt="">
           </div>
@@ -37,7 +37,7 @@
           <h3 class="text-gold">+49 (0)89 22 33 44 55 66</h3>
           <p class="line-through"><span>схема проїзду</span></p>
           <br>
-          <%= link_to 'Контакты', contact_path, class: 'cta cta--inverse cta--inline' %>
+          <%= link_to 'Контакти', contact_path, class: 'cta cta--inverse cta--inline' %>
         </div>
       </div>
     </div>
