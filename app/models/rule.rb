@@ -8,7 +8,7 @@ class Rule < ActiveRecord::Base
 
   enum category: {
     schooler: "Школьникам",
-    college: "Выпускиник колледжей",
+    college: "Выпускиникам колледжей",
     bachelor: "Бакалаврам",
     master: "Магистрам",
     foreign: "Иностранным студентам"

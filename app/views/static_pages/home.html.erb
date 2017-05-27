@@ -87,8 +87,8 @@
               <div>
                 <%= image_tag news.image, height: 171, width: 446 %>
                 <h3><%= news.title %></h3>
-                <p><%= news.description.html_safe%></p>
-                <a href="" class="link">LINK</a>
+                <p><%= correct_description(news) %></p>
+                <%= link_to 'Детали', news.link, class: "link"%>
               </div>
             <% end %>
           </div>

@@ -19,21 +19,21 @@
   <%= render 'layouts/header' %>
 
   <%- if controller_name == 'static_pages'%>
-  <main>
-    <%= yield %>
-  </main>
+    <main>
+      <%= yield %>
+    </main>
   <% else %>
-  <main>
-    <section class="section">
-      <div class="inner-wrapper">
-        <aside class="frame"></aside>
-        <div class="content">
-         <%= yield %>
+    <main>
+      <section class="section">
+        <div class="inner-wrapper">
+          <aside class="frame"></aside>
+          <div class="content">
+            <%= yield %>
+         </div>
+         <aside class="frame"></aside>
        </div>
-       <aside class="frame"></aside>
-     </div>
-   </section>
- </main>
+     </section>
+   </main>
  <% end %>
 
  <%= render 'layouts/footer' %>
