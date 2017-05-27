@@ -1,6 +1,8 @@
 class NewsController < ApplicationController
   before_action :set_news, only: [:show, :edit, :update, :destroy]
 
+  before_filter :authorize_admin, only: [:create, :edit, :new, :update, :destroy]
+
   # GET /news
   # GET /news.json
   def index
@@ -21,6 +23,9 @@ class NewsController < ApplicationController
   def edit
   end
 
+  def users_news
+    @news = News.all.order(created_at: :desc)
+  end
   # POST /news
   # POST /news.json
   def create
@@ -70,5 +75,10 @@ class NewsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def news_params
       params.require(:news).permit(:title, :description, :image, :link)
+    end
+
+    def authorize_admin
+      return if user_signed_in? && current_user.admin?
+      redirect_to root_path, alert: 'Admins only!'
     end
 end

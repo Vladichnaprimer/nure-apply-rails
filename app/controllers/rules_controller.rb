@@ -1,5 +1,6 @@
 class RulesController < ApplicationController
   before_action :set_rule, only: [:show, :edit, :update, :destroy]
+  before_filter :authorize_admin, only: [:create, :new, :edit, :update, :destroy]
 
   # GET /rules
   # GET /rules.json
@@ -103,5 +104,10 @@ class RulesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def rule_params
       params.require(:rule).permit(:title, :text, :category)
+    end
+
+    def authorize_admin
+      return if user_signed_in? && current_user.admin?
+      redirect_to root_path, alert: 'Admins only!'
     end
 end

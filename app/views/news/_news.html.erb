@@ -1,0 +1,17 @@
+<% news.each do |item|%>
+  <div class="row">
+    <div class="col-md-12">
+        <h3><%= item.title %></h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4"><%= image_tag item.image, width: '400', height: '400' %></div>
+    <div class="col-md-8">
+      <div class="rule-text">
+        <h4><%= item.description.html_safe %> </h4>
+        <%= link_to 'Подробнее', item.link, class: "link" %>
+        <p><%= item.created_at.strftime("%d.%m.%Y") %></p>
+      </div>
+    </div>
+  </div>
+<% end %>
