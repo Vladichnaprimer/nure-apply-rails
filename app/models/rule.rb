@@ -7,11 +7,11 @@ class Rule < ActiveRecord::Base
   scope :foreign, -> { where(category: Rule.categories[:foreign]) }
 
   enum category: {
-    schooler: "Школьникам",
-    college: "Выпускиникам колледжей",
+    schooler: "Випускникам шкіл",
+    college: "Випускиникам коледжей",
     bachelor: "Бакалаврам",
-    master: "Магистрам",
-    foreign: "Иностранным студентам"
+    master: "Магістрам",
+    foreign: "Іноземним студентам"
   }
 
 end

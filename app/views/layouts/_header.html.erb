@@ -13,11 +13,11 @@
           </div>
           <nav class="columns animated" data-animation="fadeIn" data-animation-disable="950">
             <ul>
-              <li><%= link_to 'Главная', root_path%></li>
+              <li><%= link_to 'Головна', root_path%></li>
               <% if user_signed_in? && current_user.admin?  %>
-                  <li><%= link_to 'Новости', news_index_path %></li>
+                  <li><%= link_to 'Новини', news_index_path %></li>
                 <% else %>
-                  <li><%= link_to 'Новости', users_news_path %></li>
+                  <li><%= link_to 'Новини', users_news_path %></li>
                 <% end %>
               <li class="has-submenu">
                 <% if user_signed_in? && current_user.admin?  %>
@@ -29,35 +29,35 @@
                   <ul class="row align-top align-justify">
                     <li>
                       <ul>
-                        <li class="submenu__link"><%= link_to 'Поступление на 1-й курс', rules_path %></li>
-                        <li class="submenu__link"><%= link_to 'Поступление на 2-й курс', rules_path %></li>
+                        <li class="submenu__link"><%= link_to 'Вступ на 1-й курс', rules_path %></li>
+                        <li class="submenu__link"><%= link_to 'Вступ на 2-й курс', rules_path %></li>
                       </ul>
                     </li>
                     <li>
                       <ul>
-                        <li class="submenu__link"><%= link_to 'Поступление на магистратуру', rules_path %></li>
-                        <li class="submenu__link"><%= link_to 'Поступление в аспирантуру', rules_path %></li>
+                        <li class="submenu__link"><%= link_to 'Вступ на магистратуру', rules_path %></li>
+                        <li class="submenu__link"><%= link_to 'Вступ в аспирантуру', rules_path %></li>
                       </ul>
                     </li>
                     <li>
                       <ul>
-                        <li class="submenu__link"><%= link_to 'Иностранцам', rules_path %></li>
+                        <li class="submenu__link"><%= link_to 'Іноземним громадянам', rules_path %></li>
                       </ul>
                     </li>
                   </ul>
                 </div>
               </li>
               <%if user_signed_in? && current_user.admin?%>
-                <li><%= link_to 'Термины', terms_path %></li>
+                <li><%= link_to 'Терміни', terms_path %></li>
               <%else%>
-                <li><%= link_to 'Термины', users_term_path %></li>
+                <li><%= link_to 'Терміни', users_term_path %></li>
               <%end%>
-              <li><a href="">Спросить</a></li>
-              <li><%= link_to 'Контакты', contact_path %></li>
+              <li><a href="">Запитати</a></li>
+              <li><%= link_to 'Контакти', contact_path %></li>
               <% if user_signed_in? %>
-                <li><%= link_to 'Выйти', destroy_user_session_path, method: :delete %></li>
+                <li><%= link_to 'Вийти', destroy_user_session_path, method: :delete %></li>
               <% else %>
-                <li><a data-target="#authorization_modal" data-toggle="modal">Войти</a></li>
+                <li><a data-target="#authorization_modal" data-toggle="modal">Війти</a></li>
               <% end %>
             </ul>
           </nav>

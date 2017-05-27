@@ -1,7 +1,7 @@
 <div class="rules">
   <p id="notice"><%= notice %></p>
 
-  <h1>Listing News</h1>
+  <h1>Додавання новини</h1>
 
   <table class="table table-hover">
 
@@ -11,8 +11,8 @@
           <td><%= news.title %></td>
           <td><%= truncate news.description, length: 40 %></td>
           <% if user_signed_in? && current_user.admin? %>
-            <td><%= link_to 'Edit', edit_news_path(news) %></td>
-            <td><%= link_to 'Destroy', news, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Редагувати', edit_news_path(news) %></td>
+            <td><%= link_to 'Видалити', news, method: :delete, data: { confirm: 'Ви впевнені?' } %></td>
           <% end %>
         </tr>
       <% end %>
@@ -21,5 +21,5 @@
 
   <br>
 
-  <%= link_to 'Create NEW', new_news_path,  class:"cta cta--inverse cta--inline" %>
+  <%= link_to 'Додати новину', new_news_path,  class:"cta cta--inverse cta--inline" %>
 </div>
