@@ -18,3 +18,5 @@
 /.idea
 .ruby-version
 .ruby-gemset
+.byebug_history
+/public/uploads

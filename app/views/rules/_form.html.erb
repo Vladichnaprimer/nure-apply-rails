@@ -20,7 +20,7 @@
   <div class="row">
     <div class="col-md-6">
       <%= f.label :category %><br>
-      <%= f.select :category, Rule.categories.values.map { |v| [v] } %>
+      <%= f.select :category, Rule.categories.map { |k, v| [v.capitalize] } %>
     </div>
   </div>
   <br><br>

@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
   resources :news
 
+  resources :faculties
+
   get '/last-news', to: 'news#users_news', as: :users_news
 
   resources :terms

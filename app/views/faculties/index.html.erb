@@ -1,0 +1,30 @@
+<div class="rules">
+  <p id="notice"><%= notice %></p>
+
+  <h2>Направления, которые могут заинтересовать Вас</h2>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <table class="table table-hover" >
+      <thead style="text-align: center">
+          <tr>
+              <td><strong>Назва напрямку</strong></td>
+              <td><strong>Проходний бал</strong></td>
+          </tr>
+      </thead>
+      <tbody>
+        <% @faculties.each do |faculty| %>
+          <tr>
+            <td><%= link_to faculty.name, faculty.link %></td>
+            <td><%= faculty.score %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+
+  <br>
+</div>
