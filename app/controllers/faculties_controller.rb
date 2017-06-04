@@ -6,7 +6,7 @@ class FacultiesController < ApplicationController
     distance = Faculty.euclidean_distance(user_score, Faculty.faculties)
 
     if distance <= 50
-        @faculties = Faculty.all.where('score <= ?', user_score).order(score: :asc)
+      @faculties = Faculty.all.where('score <= ?', user_score + 2).order(score: :asc)
     else
         redirect_to no_results_path
     end
