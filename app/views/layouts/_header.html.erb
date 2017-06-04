@@ -52,7 +52,10 @@
               <%else%>
                 <li><%= link_to 'Терміни', users_term_path %></li>
               <%end%>
-              <li><a href="">Запитати</a></li>
+              <li><%= link_to 'Запитати', '' %></li>
+              <% if current_user.category == 'schooler' %>
+                <li><%= link_to 'Факультети для Вас', faculties_path %></li>
+              <% end %>
               <li><%= link_to 'Контакти', new_contact_path %></li>
               <% if user_signed_in? %>
                 <li><%= link_to 'Вийти', destroy_user_session_path, method: :delete %></li>

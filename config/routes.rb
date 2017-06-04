@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :news
 
   resources :faculties
+  get '/no-results', to: 'faculties#no_results', as: :no_results
 
   get '/last-news', to: 'news#users_news', as: :users_news
 
