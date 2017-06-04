@@ -26,8 +26,6 @@ Rails.application.routes.draw do
 
   resources :contacts, only: [:new, :create]
 
-  get '/ask-me', to: 'bot#chatbot', as: :chatbot
-
-  get "/go/chatbot", to: redirect('/chatbot/index')
+  get "/chatbot/index", to: redirect('/chatbot/index'), as: :chatbot
 
 end

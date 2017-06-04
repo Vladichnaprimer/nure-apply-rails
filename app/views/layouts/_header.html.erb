@@ -52,7 +52,7 @@
               <%else%>
                 <li><%= link_to 'Терміни', users_term_path %></li>
               <%end%>
-              <li><%= link_to 'Запитати', '' %></li>
+              <li><%= link_to 'Запитати', chatbot_path %></li>
               <% if user_signed_in? && current_user.category == 'schooler' %>
                 <li><%= link_to 'Факультети для Вас', faculties_path %></li>
               <% end %>
