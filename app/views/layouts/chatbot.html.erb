@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ХНУРЕ Вступ</title>
+  <link rel="shortcut icon" href="/images/nure.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i" rel="stylesheet">
+  <meta name="viewport" content="width=device-width">
+  <script src="https://use.typekit.net/vet1snk.js"></script>
+  <%= stylesheet_link_tag    'chatbot', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'chatbot' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <%= yield %>
+
+ <%= javascript_include_tag 'chatbot' %>
+
+</body>
+</html>
