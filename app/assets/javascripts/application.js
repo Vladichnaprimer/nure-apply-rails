@@ -11,30 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require turbolinks
-//= require bootstrap-sprockets
-//= require script
+//= require twitter/bootstrap
 //= require bootstrap-wysihtml5
+//= require our_script
 //= require_tree .
-
-
-$(document).ready(function(){
-	$('.wysihtml5').each(function(i, elem) {
-		$(elem).wysihtml5();
-	});
-});
-
-$(document).on('page:load', function(){
-	window['rangy'].initialized = false
-});
-
-$(function(){
-    $('.view-source .hide2').hide();
-    $a = $('.view-source a');
-    $a.on('click', function(event) {
-      event.preventDefault();
-      $a.not(this).next().slideUp(500);
-      $(this).next().slideToggle(500);
-    });
-});
