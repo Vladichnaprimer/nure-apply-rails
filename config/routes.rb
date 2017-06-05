@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 
   resources :terms
   get '/common-terms', to: 'terms#users_term', as: :users_term
+  get '/results', to: 'terms#search_results', as: :search_term
   root 'static_pages#home'
   get '/contact', to: 'static_pages#contact'
   get '/structure', to: 'static_pages#structure'

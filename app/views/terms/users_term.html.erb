@@ -1,7 +1,12 @@
 <div class="rules">
   <h1>Терміни</h1>
+  <%= form_tag users_term_path, :method => 'get' do %>
+    <%= text_field_tag :search, params[:search], class: 'search' %>
+    <%= submit_tag 'Пошук', name: nil%>
+  <% end %>
 
   <div class="row">
+
   </div>
   <br><br>
   <div class="row">

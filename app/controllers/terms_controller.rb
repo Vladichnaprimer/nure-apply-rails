@@ -10,6 +10,15 @@ class TermsController < ApplicationController
 
   def users_term
     @terms = Term.all
+    if params[:search]
+      @terms = Term.search(params[:search]).order("created_at ASC")
+    else
+      @terms = Term.all.order('created_at ASC')
+    end
+  end
+
+  def search_results
+    @terms = Term.search(params[:search])
   end
   # GET /terms/1
   # GET /terms/1.json
