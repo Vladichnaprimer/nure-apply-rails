@@ -11,7 +11,29 @@
 // about supported directives.
 //
 //= require jquery
-//= require twitter/bootstrap
+//= require jquery_ujs
+//= require bootstrap-sprockets
+//= require script
 //= require bootstrap-wysihtml5
-//= require our_script
 //= require_tree .
+
+
+$(document).ready(function(){
+	$('.wysihtml5').each(function(i, elem) {
+		$(elem).wysihtml5();
+	});
+});
+
+$(document).on('page:load', function(){
+	window['rangy'].initialized = false
+});
+
+$(function(){
+    $('.view-source .hide2').hide();
+    $a = $('.view-source a');
+    $a.on('click', function(event) {
+      event.preventDefault();
+      $a.not(this).next().slideUp(500);
+      $(this).next().slideToggle(500);
+    });
+});
