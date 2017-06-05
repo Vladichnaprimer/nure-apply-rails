@@ -6,13 +6,15 @@
   <meta charset="utf-8">
   <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,400i" rel="stylesheet">
   <meta name="viewport" content="width=device-width">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="https://use.typekit.net/vet1snk.js"></script>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application' %>
-  <% if controller_name == 'static_pages' %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+
+
+  <!-- <% if controller_name == 'static_pages' %>
       <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <% end %>
+  <% end %> -->
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -37,15 +39,12 @@
    </main>
  <% end %>
 
- <%= render 'layouts/footer' %>
+<%= render 'layouts/footer' %>
 
- <%= render 'includes/login_modal' %>
+<%= render 'includes/login_modal' %>
 
- <%= javascript_include_tag 'script' %>
- <% unless controller_name == 'static_pages' %>
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
- <% end %>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<%= javascript_include_tag 'application'  %>
 
 </body>
 </html>
