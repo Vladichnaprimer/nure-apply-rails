@@ -15,8 +15,8 @@ class User < ActiveRecord::Base
   }
 
   enum category: {
-    schooler: "Випускиник школи",
-    college: "Випускиник коледжу",
+    schooler: "Випускник школи",
+    college: "Випускник коледжу",
     bachelor: "Бакалавр",
     master: "Магістр",
     foreign: "Іноземний студент"
