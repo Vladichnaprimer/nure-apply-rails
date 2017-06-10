@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ChatBot</title>
+    <title>Виртуальный помощник</title>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="icon.png">
+    <link rel="shortcut icon" href="nure.ico">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
           rel="stylesheet">
     <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.min.css">
@@ -17,30 +17,51 @@
 
 <div id="main-demo-body">
     <div class="container">
-        <div class="demo-widget">
-            <div class="demo-widget-header">Приемная комиссия</div>
-            <div class="demo-widget-body">
-
-                <div id="chatbot">
-                    <div id="chatbot-message">
-                        <p><span class="user">Комиссия: </span>Приветствую, я чатбот, который ответит на интересующие
-                            вас вопросы по поводу поступления в наш ВУЗ.</p>
-                    </div>
-                    <form action="">
-                        <div class="input-group">
-                            <input id="chatbot-input" type="text" class="form-control"
-                                   placeholder="Введите сообщение..." autocomplete="off">
-                            <div class="input-group-btn">
-                                <button id="chatbot-submit" class="btn btn-default" type="submit">Отправить</button>
-                            </div>
+        <div class="col-md-12">
+            <div class="demo-widget">
+                <div class="demo-widget-header">Задавайте вопрос</div>
+                <div class="demo-widget-body">
+                    <div id="chatbot">
+                        <div id="chatbot-message">
+                            <p><span class="user">Помощник: </span>Приветствую, я мощник абитуриенту, который ответит на
+                                интересующие
+                                Вас вопросы по поводу поступления в наш ВУЗ.</p>
                         </div>
-                    </form>
-
+                        <form action="">
+                            <div class="input-group">
+                                <input id="chatbot-input" type="text" class="form-control"
+                                       placeholder="Введите сообщение..." autocomplete="off">
+                                <div class="input-group-btn">
+                                    <button id="chatbot-submit" class="btn btn-default" type="submit">Отправить</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion"
+                           href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Часто-задаваемые вопросы
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                        <ul>
+                            <li>Стоимость контрактного обучения?</li>
+                            <li>Оригинальный документ правил приема?</li>
+                            <li>Конкурсный балл для первого курса?</li>
+                            <li>Прием документов на первый курс?</li>
+                            <li>Количество бюджетных мест?</li>
+                            <li>Время работы приемной комиссии?</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-
     </div>
 </div>
 
